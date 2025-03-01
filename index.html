@@ -7,8 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 <body class="bg-[#F4F7FF] font-[poppins]">
@@ -24,7 +24,7 @@
             <div class="flex items-center justify-between"> 
                 <div class="bg-[#F4F7FF] py-1 px-3 rounded-3xl flex items-center mr-2">
                     <img class="mr-2 h-5" src="./assets/checkbox.png" alt="check-box">
-                    <p class="font-extrabold text-xl">23</p>
+                    <p id="completed-task" class="font-extrabold text-xl">0</p>
                 </div>
                 <div class="p-2 rounded-full bg-[#F4F7FF]">
                     <img class="h-7" src="./assets/theme-btn.png" alt="theme">
@@ -40,11 +40,11 @@
                     </div>
                     <div class="flex flex-col items-start">
                         <p class="text-sm font-semibold text-[#00303C]">Task Assigned</p>
-                        <p class="text-2xl font-extrabold text-[#00303C]">05</p>
+                        <p id="task-num" class="text-2xl font-extrabold text-[#00303C]">6</p>
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] col-span-2 rounded-xl h-26 flex items-center p-5">
+                <div id="blog-btn" class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] col-span-2 rounded-xl h-26 flex items-center p-5">
                     <img class="mx-3 h-16" src="./assets/board.png" alt="borad">
                     <p class="text-lg text-[white] ">Discover Something <br> New Today!</p>
                 </div>
@@ -66,7 +66,7 @@
                 <div class="p-4 bg-[#F4F7FF] rounded-xl h-70">
                     <div class="border-dashed border-[#3752FD33] border-b-2 h-45">
                         <span class="text-[#00303C] text-xs p-2 bg-[white] rounded-lg">ShopEase</span>
-                        <p class="text-lg font-medium my-3">Fix Mobile Button Issue</p>
+                        <p id="title1" class="text-lg font-medium my-3">Fix Mobile Button Issue</p>
                         <div class="bg-[white] overflow-auto h-22 rounded-lg">
                             <p class="text-gray-600 text-xs p-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                         </div>
@@ -74,16 +74,16 @@
                     <div class="flex justify-between mt-6">
                         <div>
                             <p class="text-xs mb-2">Deadline</p>
-                            <p class="text-sm font-semibold">21 March 2025</p>
+                            <p class="text-sm font-semibold">5 March 2025</p>
                         </div>
-                        <button class="py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
+                        <button id="1" class="completed-btn py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
                     </div>
                 </div>
                 <!-- box2 -->
                 <div class="p-4 bg-[#F4F7FF] rounded-xl h-70">
                     <div class="border-dashed border-[#3752FD33] border-b-2 h-45">
                         <span class="text-[#00303C] text-xs p-2 bg-[white] rounded-lg">CloudSync</span>
-                        <p class="text-lg font-medium my-3">Add Dark Mode</p>
+                        <p id="title2" class="text-lg font-medium my-3">Add Dark Mode</p>
                         <div class="bg-[white] overflow-auto h-22 rounded-lg">
                             <p class="text-gray-600 text-xs p-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
                         </div>
@@ -91,9 +91,9 @@
                     <div class="flex justify-between mt-6">
                         <div>
                             <p class="text-xs mb-2">Deadline</p>
-                            <p class="text-sm font-semibold">21 March 2025</p>
+                            <p class="text-sm font-semibold">9 March 2025</p>
                         </div>
-                        <button class="py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
+                        <button id="2" class="completed-btn py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
                     </div>
                 </div>
                 
@@ -101,7 +101,7 @@
                 <div class="p-4 bg-[#F4F7FF] rounded-xl h-70">
                     <div class="border-dashed border-[#3752FD33] border-b-2 h-45">
                         <span class="text-[#00303C] text-xs p-2 bg-[white] rounded-lg">SwiftPay</span>
-                        <p class="text-lg font-medium my-3">Optimize  Home page </p>
+                        <p id="title3" class="text-lg font-medium my-3">Optimize  Home page</p>
                         <div class="bg-[white] overflow-auto h-22 rounded-lg">
                             <p class="text-gray-600 text-xs p-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                         </div>
@@ -109,9 +109,9 @@
                     <div class="flex justify-between mt-6">
                         <div>
                             <p class="text-xs mb-2">Deadline</p>
-                            <p class="text-sm font-semibold">21 March 2025</p>
+                            <p class="text-sm font-semibold">12 March 2025</p>
                         </div>
-                        <button class="py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
+                        <button id="3" class="completed-btn py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
                     </div>
                 </div>
 
@@ -119,7 +119,7 @@
                 <div class="p-4 bg-[#F4F7FF] rounded-xl h-70">
                     <div class="border-dashed border-[#3752FD33] border-b-2 h-45">
                         <span class="text-[#00303C] text-xs p-2 bg-[white] rounded-lg">Meta</span>
-                        <p class="text-lg font-medium my-3">Add new emoji 🤲</p>
+                        <p id="title4" class="text-lg font-medium my-3">Add new emoji 🤲</p>
                         <div class="bg-[white] overflow-auto h-22 rounded-lg">
                             <p class="text-gray-600 text-xs p-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
                         </div>
@@ -127,9 +127,9 @@
                     <div class="flex justify-between mt-6">
                         <div>
                             <p class="text-xs mb-2">Deadline</p>
-                            <p class="text-sm font-semibold">21 March 2025</p>
+                            <p class="text-sm font-semibold">15 March 2025</p>
                         </div>
-                        <button class="py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
+                        <button id="4" class="completed-btn py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
                     </div>
                 </div>
 
@@ -137,7 +137,7 @@
                 <div class="p-4 bg-[#F4F7FF] rounded-xl h-70">
                     <div class="border-dashed border-[#3752FD33] border-b-2 h-45">
                         <span class="text-[#00303C] text-xs p-2 bg-[white] rounded-lg">Google LLC</span>
-                        <p class="text-lg font-medium my-3">Integrate OpenAI API </p>
+                        <p id="title5" class=" text-lg font-medium my-3">Integrate OpenAI API </p>
                         <div class="bg-[white] overflow-auto h-22 rounded-lg">
                             <p class="text-gray-600 text-xs p-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                         </div>
@@ -145,9 +145,9 @@
                     <div class="flex justify-between mt-6">
                         <div>
                             <p class="text-xs mb-2">Deadline</p>
-                            <p class="text-sm font-semibold">21 March 2025</p>
+                            <p class="text-sm font-semibold">18 March 2025</p>
                         </div>
-                        <button class="py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
+                        <button id="5" class="completed-btn py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
                     </div>
                 </div>
 
@@ -155,7 +155,7 @@
                 <div class="p-4 bg-[#F4F7FF] rounded-xl h-70">
                     <div class="border-dashed border-[#3752FD33] border-b-2 h-45">
                         <span class="text-[#00303C] text-xs p-2 bg-[white] rounded-lg">Glassdoar</span>
-                        <p class="text-lg font-medium my-3">Improve Job searching </p>
+                        <p id="title6" class="text-lg font-medium my-3">Improve Job searching </p>
                         <div class="bg-[white] overflow-auto h-22 rounded-lg">
                             <p class="text-gray-600 text-xs p-2">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
                         </div>
@@ -165,7 +165,7 @@
                             <p class="text-xs mb-2">Deadline</p>
                             <p class="text-sm font-semibold">21 March 2025</p>
                         </div>
-                        <button class="py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
+                        <button id="6" class="completed-btn py-2 px-3 text-white bg-[#3752FD] rounded-lg font-medium">Completed</button>
                     </div>
                 </div>
                 
@@ -176,19 +176,21 @@
             <div class="flex flex-col items-center justify-center p-6 border-dashed border-[#3752FD33] border-b-2">
                 <div class="flex items-center justify-center">
                     <img class="h-5 mr-3" src="./assets/activity.png" alt="activity.png">
-                    <p class="text-lg font-medium my-3">Activity Log</p>
+                    <p id="title1" class="text-lg font-medium my-3">Activity Log</p>
                 </div>
-                <button class="py-2 px-4 text-white bg-[#3752FD] rounded-lg font-medium">Clear History</button>
+                <button id="clear-log" class="py-2 px-4 text-white bg-[#3752FD] rounded-lg font-medium">Clear History</button>
             </div>
 
              <!-- history -->
-            <div class="p-4">
-                <p class="bg-[#F4F7FF] p-2 text-xs rounded-lg">You have Complete The Task Add Dark Mode at <span>12:48:15 PM</span></p>
+            <div id="activity-log" class="p-4">
+                <!-- <p class="bg-[#F4F7FF] p-2 text-xs rounded-lg">You have Complete The Task Add Dark Mode at <span>12:48:15 PM</span></p> -->
             </div>
 
         </section>
-
     </section>
+
     <div class="h-5"></div>
+
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
