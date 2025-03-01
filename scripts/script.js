@@ -1,11 +1,41 @@
 document.getElementById("blog-btn").addEventListener("click", function(){
     window.location.href = "./blog.html"
 })
-document.getElementById("clear-log").addEventListener("click", function(event){
+document.getElementById("clear-log").addEventListener("click", function(){
     const activityLog = document.getElementById("activity-log");
     activityLog.innerHTML = "";
 })
 
+// time & date
+const date = new Date();
+const weekName = date.toLocaleDateString('en-US', { weekday: 'short' });
+document.getElementById("week").innerText = weekName;
+
+const dateMY = date.toLocaleDateString('en-US', {month: 'short' , day: 'numeric',  year: 'numeric' });
+
+document.getElementById("date-m-y").innerText = dateMY;
+
+
+// color button
+
+const themeBtn = document.getElementById("theme-btn");
+
+let varColor = '[#F4F7FF]';
+themeBtn.addEventListener("click", function(){
+    function getRandomColor() {
+        return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    }
+    
+    let randomColor = getRandomColor();
+    console.log(randomColor)
+    const body = document.querySelector("body");
+    body.classList.remove("bg-" + varColor);
+    body.classList.add("bg-" + "[" + randomColor +"]");
+    varColor = "[" + randomColor + "]";
+
+})
+
+// completed button
 const btns = document.querySelectorAll(".completed-btn");
 
 for(const btn of btns){
@@ -37,7 +67,7 @@ for(const btn of btns){
             completedTask.innerText = comTaskNum + 1;
 
             if(taskAssign.innerText === "0"){
-                alert("congrates!! you have completed all the current task");
+                alert("congrats!! you have completed all the current task");
             }
         }
     })
